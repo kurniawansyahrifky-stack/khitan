@@ -1,0 +1,11 @@
+      <!-- audio -->
+       <div id="audio-container">
+        <audio id="backSong" loop>
+          <!-- Masukkan link mp3 di bagian src di bawah ini -->
+          <source src="https://files.catbox.moe/nm4i3w.mp3" type="audio/mp3">
+        </audio>
+
+        <div class="audio-icon-wrapper" style="display: none; position: fixed; bottom: 20px; right: 20px; background: #ff9800; color: white; padding: 10px; border-radius: 50%; cursor: pointer; z-index: 9999;">
+          <i class="bi bi-disc fs-3"></i>
+        </div>
+       </div>
