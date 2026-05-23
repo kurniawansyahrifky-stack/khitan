@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Undangan Khitanan Zayen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Menambahkan font ceria untuk anak (Comic Neue) sebagai opsi -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Pacifico&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- simply countdown -->
+    <link rel="stylesheet" href="countdown/circle.css" />
+    <script src="countdown/simplyCountdown.umd.js"></script>
+    
+    <style>
+      /* Sedikit penyesuaian inline agar terlihat lebih ceria untuk anak */
+      .hero h1 { font-family: 'Pacifico', cursive; color: #ffeb3b; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+      .home h2, .info h2, .story h2, .gallery h2, .rsvp h2, .gifts h2 { color: #0d6efd; font-family: 'Comic Neue', cursive; font-weight: 700; }
+      .bg-anak { background-color: #f0f8ff; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+      .btn-primary { background-color: #ff9800; border-color: #ff9800; }
+      .btn-primary:hover { background-color: #e68a00; border-color: #e68a00; }
+    </style>
+  </head>
+  <body>
+    <!-- bagian hero -->
+    <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
+      <main>
+        <h4>Kepada Yth. <span>Bapak/Ibu/Saudara/i, </span></h4>
+        <h1>Zayen</h1>
+        <p>Akan melangsungkan Tasyakuran Khitanan dalam:</p>
+        <!-- nanti ada countdown disini -->
+        <div id="countdown" class="countdown simply-countdown-circle mt-4 mb-4"></div>
+        <a href="#home" class="btn btn-primary mt-4 btn-lg" onClick="enableScroll()">Buka Undangan</a>
+      </main>
+    </section>
+
+    <!-- bagian navbar -->
+    <nav class="navbar navbar-expand-md bg-white shadow-sm sticky-top mynavbar">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="#" style="font-family: 'Comic Neue', cursive;">Khitanan Zayen</a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-primary" id="offcanvasNavbarLabel">Khitanan Zayen</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+              <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="#home">Home</a>
+                <a class="nav-link" href="#info">Info</a>
+                <a class="nav-link" href="#story">Momen</a>
+                <a class="nav-link" href="#gallery">Galeri</a>
+                <a class="nav-link" href="#rsvp">Kehadiran</a>
+                <a class="nav-link" href="#gifts">Kado</a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- bagian home -->
+    <section id="home" class="home pt-5 pb-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2>Tasyakuran Khitanan</h2>
+            <p class="mt-3">Assalamu'alaikum Warahmatullahi Wabarakatuh.<br>Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara Tasyakuran Khitanan putra kami:</p>
+          </div>
+
+          <div class="row justify-content-center mt-4">
+            <!-- Profil Anak -->
+            <div class="col-lg-6 col-md-8 text-center bg-anak">
+              <!-- Foto Anak Utama -->
+              <img src="https://files.catbox.moe/tl7etp.jpg" alt="Zayen" class="img-fluid rounded-circle mb-3" style="width: 200px; height: 200px; object-fit: cover; border: 5px solid #ff9800;">
+              <h3 style="font-family: 'Pacifico', cursive; color: #0d6efd;">Zayen</h3>
+              <p class="mb-1">Putra dari:</p>
+              <h5 class="fw-bold">Bpk. Syarifudin & Ibu Lusiana Kurniawati</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- bagian info -->
+    <section id="info" class="info bg-light pt-5 pb-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <h2>Informasi Acara</h2>
+            <p class="alamat mt-3 fw-bold">Lokasi Acara: <br>Kediaman Bapak Syarifudin<br>Kp. Jati Parung RT 04/05 Blok A12</p>
+            
+            <!-- Iframe Koordinat: 6°25'34.8"S 106°43'38.4"E -->
+            <iframe src="https://maps.google.com/maps?q=-6.426333,106.727333&hl=id&z=15&output=embed" width="100%" height="250" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+            <!-- Tombol Buka Maps -->
+            <a href="https://maps.google.com/maps?q=-6.426333,106.727333" target="_blank" class="btn btn-primary btn-sm my-4"><i class="bi bi-geo-alt"></i> Buka Google Maps</a>
+            <p class="description">Kehadiran serta doa restu dari Bapak/Ibu/Saudara/i merupakan suatu kehormatan dan kebahagiaan bagi kami.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+          <div class="col-md-5 col-10">
+            <div class="card text-center border-0 shadow-sm mb-4">
+              <div class="card-header bg-primary text-white fw-bold">
+                Tasyakuran / Resepsi
+              </div>
+              <div class="card-body bg-anak">
+                <div class="row justify-content-center">
+                  <div class="col-md-6 mb-3">
+                    <i class="bi bi-clock fs-1 text-warning d-block mb-2"></i>
+                    <span class="fw-bold">09.00 - Selesai</span>
+                  </div>
+                  <div class="col-md-6">
+                    <i class="bi bi-calendar3 fs-1 text-warning d-block mb-2"></i>
+                    <span class="fw-bold">Minggu, 22 Mei 2026</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- bagian story -->
+    <section id="story" class="story pt-5 pb-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <span class="text-secondary d-block mb-2">Jejak Langkah</span>
+            <h2>Momen Bahagia Zayen</h2>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col">
+            <ul class="timeline">
+              <li>
+                <!-- Foto Momen 1 -->
+                <div class="timeline-image" style="background-image: url('https://files.catbox.moe/4w0n2x.jpg'); border: 4px solid #ff9800;"></div>
+                <div class="timeline-panel bg-light p-3 rounded shadow-sm">
+                  <div class="timeline-heading">
+                    <h4 class="text-primary">Kelahiran Zayen</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Alhamdulillah, lahir dengan sehat dan membawa kebahagiaan bagi keluarga kami.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="timeline-inverted">
+                <!-- Foto Momen 2 -->
+                <div class="timeline-image" style="background-image: url('https://files.catbox.moe/8bl92j.jpg'); border: 4px solid #0d6efd;"></div>
+                <div class="timeline-panel bg-light p-3 rounded shadow-sm">
+                  <div class="timeline-heading">
+                    <h4 class="text-primary">Tumbuh Ceria</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Menjadi anak yang ceria, pintar, dan sholeh. Harapan dan doa selalu menyertainya.</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- bagian gallery -->
+     <section id="gallery" class="gallery bg-light pt-5 pb-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <span class="text-secondary d-block mb-2">Potret Keceriaan</span>
+            <h2>Galeri Zayen</h2>
+          </div>
+
+          <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-2 justify-content-center mt-4">
+            <!-- Galeri 1 -->
+            <div class="col mt-3">
+              <a href="https://files.catbox.moe/tl7etp.jpg" data-toggle="lightbox" data-caption="Zayen 1" data-galery="mygallery">
+                <img src="https://files.catbox.moe/tl7etp.jpg" alt="Zayen 1" class="img-fluid w-100 rounded shadow-sm border border-white border-4" style="aspect-ratio: 1/1; object-fit: cover;">
+              </a>
+            </div>
+
+            <!-- Galeri 2 -->
+            <div class="col mt-3">
+              <a href="https://files.catbox.moe/4w0n2x.jpg" data-toggle="lightbox" data-caption="Zayen 2" data-galery="mygallery">
+                <img src="https://files.catbox.moe/4w0n2x.jpg" alt="Zayen 2" class="img-fluid w-100 rounded shadow-sm border border-white border-4" style="aspect-ratio: 1/1; object-fit: cover;">
+              </a>
+            </div>
+            
+            <!-- Galeri 3 -->
+            <div class="col mt-3">
+              <a href="https://files.catbox.moe/8bl92j.jpg" data-toggle="lightbox" data-caption="Zayen 3" data-galery="mygallery">
+                <img src="https://files.catbox.moe/8bl92j.jpg" alt="Zayen 3" class="img-fluid w-100 rounded shadow-sm border border-white border-4" style="aspect-ratio: 1/1; object-fit: cover;">
+              </a>
+            </div>
+            
+            <!-- Galeri 4 -->
+            <div class="col mt-3">
+              <a href="https://files.catbox.moe/pa0skk.jpg" data-toggle="lightbox" data-caption="Zayen 4" data-galery="mygallery">
+                <img src="https://files.catbox.moe/pa0skk.jpg" alt="Zayen 4" class="img-fluid w-100 rounded shadow-sm border border-white border-4" style="aspect-ratio: 1/1; object-fit: cover;">
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+     </section>
+
+    <!-- rsvp -->
+     <section id="rsvp" class="rsvp pt-5 pb-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <h2>Konfirmasi Kehadiran</h2>
+            <p>Mohon isi form di bawah ini untuk konfirmasi kehadiran Bapak/Ibu.</p>
+          </div>
+
+          <form class="row g-3 align-items-center justify-content-center mt-3" method="POST" 
+          action="YOUR_GOOGLE_SCRIPT_LINK_HERE" id="my-form">
+            <div class="col-md-4">
+              <label for="nama" class="form-label">Nama Tamu</label>
+              <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama">
+            </div>
+
+            <div class="col-md-3">
+              <label for="jumlah" class="form-label">Jumlah Hadir</label>
+              <input type="number" class="form-control" id="jumlah" name="jumlah" min="1" max="5" value="1">
+            </div>
+
+            <div class="col-md-3">
+              <label for="status" class="form-label">Konfirmasi</label>
+              <select name="status" id="status" class="form-select">
+                <option selected>Pilih...</option>
+                <option value="Hadir">InsyaAllah Hadir</option>
+                <option value="Tidak Hadir">Maaf, Tidak Hadir</option>
+              </select>
+            </div>
+
+            <div class="col-md-2 mt-md-5 text-center">
+              <button class="btn btn-primary w-100">Kirim</button>
+            </div>
+          </form>
+
+          <div class="row justify-content-center mt-5">
+            <div class="col-md-8 text-center">
+              <h5>Berikan Ucapan & Doa</h5>
+              <!-- code bagian coment tamu undangan menggunakan disqus -->
+              <div id="disqus_thread"></div>
+              <script>
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+                  s.src = 'https://mywedding1-1.disqus.com/embed.js'; /* Nanti ganti dengan link disqus Anda */
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+              </script>
+              <noscript>Please enable JavaScript to view the comments.</noscript>
+            </div>
+          </div>
+
+        </div>
+      </div>
+     </section>
+
+     <!-- gifts -->
+     <section id="gifts" class="gifts bg-light pt-5 pb-5 text-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10">
+            <span class="text-secondary d-block mb-2">Tanda Kasih</span>
+            <h2>Kirim Kado / Amplop Digital</h2>
+            <p class="mb-4">Doa restu Anda merupakan karunia yang sangat berarti. Namun jika Bapak/Ibu/Saudara/i ingin memberikan tanda kasih untuk Zayen, dapat melalui fitur di bawah ini:</p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <ul class="list-group shadow-sm">
+              <!-- Transfer DANA -->
+              <li class="list-group-item p-4">
+                <div class="fw-bold fs-5 text-primary">DANA</div>  
+                <p class="mb-1 fs-4 fw-bold">081219623569</p>
+                <p class="text-muted">a.n Lusiana Kurniawati</p>
+                <button class="btn btn-sm btn-outline-secondary mt-2" onclick="navigator.clipboard.writeText('081219623569'); alert('Nomor DANA Disalin!');"><i class="bi bi-clipboard"></i> Salin Nomor DANA</button>
+              </li>
+              
+              <!-- QRIS -->
+              <li class="list-group-item p-4 mt-3 rounded">
+               <div class="fw-bold fs-5 text-primary mb-3">Scan QRIS</div>  
+                <img src="https://files.catbox.moe/xhualq.jpeg" alt="QRIS Zayen" class="img-fluid border p-2 rounded" style="max-width: 250px;">
+                <p class="text-muted mt-2">Scan menggunakan M-Banking atau E-Wallet (OVO, Dana, Gopay, dll)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+     </section>
+
+     <!-- footer -->
+      <footer class="bg-primary text-white pt-4 pb-4 mt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <small class="block">&copy; 2026 Tasyakuran Khitanan Zayen.</small>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- audio -->
+       <div id="audio-container">
+        <audio id="backSong" loop>
+          <!-- Link Musik Catbox -->
+          <source src="https://files.catbox.moe/nm4i3w.mp3" type="audio/mp3">
+        </audio>
+
+        <div class="audio-icon-wrapper" style="display: none; position: fixed; bottom: 20px; right: 20px; background: #ff9800; color: white; padding: 10px; border-radius: 50%; cursor: pointer; z-index: 9999;">
+          <i class="bi bi-disc fs-3"></i>
+        </div>
+       </div>
+
+<!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.5/dist/index.bundle.min.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        simplyCountdown('#countdown', {
+          year: 2026,
+          month: 5,
+          day: 22,
+          hours: 9, 
+          minutes: 0, 
+          seconds: 0, 
+          words: {
+            days: { root: 'Hari', lambda: (root, n) => root },
+            hours: { root: 'Jam', lambda: (root, n) => root },
+            minutes: { root: 'Menit', lambda: (root, n) => root },
+            seconds: { root: 'Detik', lambda: (root, n) => root },
+          },
+          plural: false, 
+        });
+      });
+    </script>
+    
+    <script>
+      const stickyTop = document.querySelector('.sticky-top');
+      const offcanvas = document.querySelector('.offcanvas');
+
+        offcanvas.addEventListener('show.bs.offcanvas', function() {
+        stickyTop.style.overflow = 'visible';
+        });
+
+        offcanvas.addEventListener('hidden.bs.offcanvas', function() {
+        stickyTop.style.overflow = 'hidden';
+        });
+    </script>
+
+    <script>
+      const rootElement = document.querySelector(':root');
+      const audioIconWrapper = document.querySelector('.audio-icon-wrapper')
+      const audioIcon = document.querySelector('.audio-icon-wrapper i')
+      const backSong = document.querySelector('#backSong');
+      let isPlaying = false;
+
+      function disableScroll() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+        window.onscroll = function() {
+          window.scrollTo(scrollTop, scrollLeft);
+        }
+        rootElement.style.scrollBehavior = 'auto';
+      }
+
+      function enableScroll() {
+        window.onscroll = function() { }
+        rootElement.style.scrollBehavior = 'smooth';
+        playAudio()
+      }
+
+      function playAudio() {
+        backSong.volume = 0.5;
+        backSong.play();
+        audioIconWrapper.style.display = 'flex'
+        isPlaying = true;
+      }
+
+      audioIconWrapper.onclick = function () {
+        if (isPlaying) {
+          backSong.pause ();
+          audioIcon.classList.remove('bi-disc');
+          audioIcon.classList.add('bi-pause-circle');
+        } else {
+          backSong.play ();
+          audioIcon.classList.add('bi-disc');
+          audioIcon.classList.remove('bi-pause-circle');
+        }
+        isPlaying = !isPlaying;
+      }
+      disableScroll();
+    </script>
+
+     <script>
+      window.addEventListener("load", function() {
+      const form = document.getElementById('my-form');
+      form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const action = e.target.action;
+      fetch(action, {
+      method: 'POST',
+      body: data,
+      })
+      .then(() => {
+      alert("Konfirmasi kehadiran berhasil dikirim. Terima kasih!");
+      })
+      });
+      });
+     </script>
+
+     <script>
+      const urlParams = new URLSearchParams(window.location.search); 
+      const nama = urlParams.get('n') || '';
+      const pronoun = urlParams.get('p') || '';
+
+      const namaContainer = document.querySelector('.hero h4 span');
+      if (nama) {
+          namaContainer.innerText = `${pronoun} ${nama},`;
+          document.querySelector('#nama').value = nama;
+      }
+     </script>
+
+  </body>
+</html>
